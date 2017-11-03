@@ -1,4 +1,4 @@
-import Operate.Match;
+package Operate;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Created by 费慧通 on 2017/10/25.
+ * Created by 费慧通 on 2017/11/3.
  */
-public class Main {
+public class SplitCode {
     private List<String> double_operator = Arrays.asList("==",">=","<=","+=","-=","*=","/=","&&","||","!=","/*","*/");
     private List<String> single_operator = Arrays.asList("{","}",";","(",")","[","]",":","\"",",","+","-","*","/",">","<","|", "&","!", "=" );
 
@@ -74,7 +74,7 @@ public class Main {
      * 读文件
      * @return
      */
-    public String getCodeFromFile(){
+    public String[] getCodeFromFile(){
         String result = "";
         try {
             Scanner sc = new Scanner(new File("src/resources/input.txt"));
@@ -86,18 +86,6 @@ public class Main {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        return result;
-    }
-
-    public static void main(String[] args){
-        Match match = new Match();
-        Main main = new Main();
-        String enter = main.getCodeFromFile();
-        String[] code = main.getSplitList(enter);
-        for(int i=0;i<code.length;i++){
-            if(code[i].length()>0) {
-                System.out.println(match.getToken(code[i]));
-            }
-        }
+        return getSplitList(result);
     }
 }
