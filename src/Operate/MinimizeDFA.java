@@ -1,3 +1,10 @@
+package Operate;
+
+import Category.DFAO;
+import Category.DFAState;
+import Category.NFA;
+import Category.NFAState;
+
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -11,7 +18,7 @@ public class MinimizeDFA {
      * @param list
      * @return
      */
-    public ArrayList<Integer> getFinalState(NFA nfa,ArrayList<ArrayList<NFAState>> list){
+    public ArrayList<Integer> getFinalState(NFA nfa, ArrayList<ArrayList<NFAState>> list){
         ArrayList<Integer> result = new ArrayList<>();
         NFAState end = nfa.getEnd();
         for(int i=0;i<list.size();i++){
@@ -146,7 +153,7 @@ public class MinimizeDFA {
      * @param num
      * @return
      */
-    public DFAState getDFAState(ArrayList<DFAState> states,int num){
+    public DFAState getDFAState(ArrayList<DFAState> states, int num){
         for(int i=0;i<states.size();i++){
             if(states.get(i).getNum()==num){
                 return states.get(i);

@@ -1,3 +1,8 @@
+package Operate;
+
+import Category.NFA;
+import Category.NFAState;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;

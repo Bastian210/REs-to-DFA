@@ -1,7 +1,7 @@
-import javax.sql.rowset.serial.SerialStruct;
+import Operate.Match;
+
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -95,7 +95,7 @@ public class Main {
         String enter = main.getCodeFromFile();
         String[] code = main.getSplitList(enter);
         for(int i=0;i<code.length;i++){
-            if(code[i].length()>0){
+            if(code[i].length()>0) {
                 System.out.println(match.getToken(code[i]));
             }
         }

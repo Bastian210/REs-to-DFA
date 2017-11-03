@@ -1,3 +1,11 @@
+package Operate;
+
+import Category.DFAO;
+import Category.DFAState;
+import Category.NFA;
+import Category.NFAState;
+import Category.Token;
+
 import java.util.*;
 
 /**

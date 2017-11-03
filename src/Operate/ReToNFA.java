@@ -1,3 +1,8 @@
+package Operate;
+
+import Category.NFA;
+import Category.OperatorStack;
+
 import java.util.*;
 
 /**
